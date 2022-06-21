@@ -30,6 +30,12 @@
       "relation": "manyToOne",
       "target": "api::course.course",
       "inversedBy": "attendances"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::student.student",
+      "mappedBy": "attendances"
     }
   }
 }

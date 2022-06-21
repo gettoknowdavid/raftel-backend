@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "Student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uid": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "middleName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "email": {
+      "type": "email"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "Level 100",
+        "Level 200",
+        "Level 300",
+        "Level 400",
+        "Level 500"
+      ]
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "address": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "attendanceRecord": {
+      "type": "json"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "department": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::department.department"
+    },
+    "program": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::program.program"
+    },
+    "attendances": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::attendance.attendance",
+      "inversedBy": "students"
+    }
+  }
+}
