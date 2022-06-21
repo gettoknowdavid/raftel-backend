@@ -9,7 +9,7 @@ module.exports = {
     if (open === true) {
 
       // If the attendance is open, set a timer to close it
-      setTimeout(async ()=> {
+      setTimeout(async () => {
         await strapi.db.query('api::attendance.attendance').update({
           where: { id: id },
           data: { open: false }

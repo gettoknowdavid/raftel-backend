@@ -4,7 +4,8 @@
   "info": {
     "singularName": "attendance",
     "pluralName": "attendances",
-    "displayName": "Attendance"
+    "displayName": "Attendance",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -36,6 +37,9 @@
       "relation": "manyToMany",
       "target": "api::student.student",
       "mappedBy": "attendances"
+    },
+    "content": {
+      "type": "json"
     }
   }
 }
