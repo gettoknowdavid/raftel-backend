@@ -26,17 +26,17 @@
       "relation": "oneToOne",
       "target": "api::program.program"
     },
-    "faculty": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::faculty.faculty",
-      "inversedBy": "course"
-    },
     "attendances": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::attendance.attendance",
       "mappedBy": "course"
+    },
+    "faculty": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::faculty.faculty",
+      "inversedBy": "course"
     }
   }
 }

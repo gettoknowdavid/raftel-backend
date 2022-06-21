@@ -4,7 +4,8 @@
   "info": {
     "singularName": "faculty",
     "pluralName": "faculties",
-    "displayName": "Faculty"
+    "displayName": "Faculty",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -26,7 +27,7 @@
       "type": "string"
     },
     "email": {
-      "type": "string"
+      "type": "email"
     },
     "gender": {
       "type": "enumeration",
@@ -34,13 +35,6 @@
         "Male",
         "Female"
       ]
-    },
-    "avatar": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
     },
     "phone": {
       "type": "string"
@@ -59,6 +53,14 @@
         "Lecturer"
       ]
     },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "program": {
       "type": "relation",
       "relation": "manyToOne",
@@ -70,6 +72,11 @@
       "relation": "oneToOne",
       "target": "api::course.course",
       "inversedBy": "faculty"
+    },
+    "department": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::department.department"
     }
   }
 }
