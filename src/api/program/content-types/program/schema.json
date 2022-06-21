@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "departments",
+  "collectionName": "programs",
   "info": {
-    "singularName": "department",
-    "pluralName": "departments",
-    "displayName": "Department"
+    "singularName": "program",
+    "pluralName": "programs",
+    "displayName": "Program"
   },
   "options": {
     "draftAndPublish": false
@@ -18,11 +18,11 @@
     "uid": {
       "type": "string"
     },
-    "programs": {
+    "department": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::program.program",
-      "mappedBy": "department"
+      "relation": "manyToOne",
+      "target": "api::department.department",
+      "inversedBy": "programs"
     }
   }
 }
