@@ -6,7 +6,7 @@ module.exports = {
     const lastName = result.lastName.toString().toLowerCase();
     const email = `${firstName}.${lastName}@stu.raftel.io`;
     const emailAlt = `${firstName}.${lastName}${result.id}@stu.raftel.io`;
-    const password = 'student2022?';
+    const password = 'student2022';
 
     function getStudentId(seq, year = '01', program = 'ECN') {
       let getZero = '';
