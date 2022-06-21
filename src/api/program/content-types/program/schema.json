@@ -23,6 +23,12 @@
       "relation": "manyToOne",
       "target": "api::department.department",
       "inversedBy": "programs"
+    },
+    "faculties": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faculty.faculty",
+      "mappedBy": "program"
     }
   }
 }
