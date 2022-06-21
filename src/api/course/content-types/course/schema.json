@@ -37,6 +37,12 @@
       "relation": "oneToOne",
       "target": "api::faculty.faculty",
       "inversedBy": "course"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::student.student",
+      "inversedBy": "courses"
     }
   }
 }

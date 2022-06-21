@@ -86,6 +86,12 @@
       "relation": "manyToMany",
       "target": "api::attendance.attendance",
       "inversedBy": "students"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "students"
     }
   }
 }
